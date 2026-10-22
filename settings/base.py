@@ -25,7 +25,12 @@ DJANGO_AND_THIRD_PARTY_APPS = [
     'django.contrib.staticfiles',
 ]
 
-PROJECT_APPS = []
+PROJECT_APPS = [
+    'apps.categories', 
+    'apps.venues',
+    'apps.abstracts',
+    'apps.auths',
+]
 
 INSTALLED_APPS = DJANGO_AND_THIRD_PARTY_APPS + PROJECT_APPS 
 
@@ -86,3 +91,4 @@ USE_TZ = True
 #
 STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+AUTH_USER_MODEL='auths.CustomUser'
